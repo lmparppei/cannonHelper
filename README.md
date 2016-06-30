@@ -9,6 +9,8 @@ You can access the world through CannonHelper.world and all bodies added by the 
 
 This could be expanded a lot. Feel free to do it - I lack the skills and knowledge!
 
+**Note:** You need to include Cannon.js in your project.
+
 
 ### Example 
 
