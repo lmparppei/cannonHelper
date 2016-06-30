@@ -19,12 +19,12 @@ physics.timeStep = 1.0 / 60.0;
 var mesh = new THREE.Mesh( geometry, material );
 ```
 
-Easiest way to use the helper is through the .addBody cheat function. It will automatically create a body from Three.js shape.
+Easiest way to use the helper is through the .addBody cheat function. It will automatically create a body from Three.js mesh. (Come to think of it, maybe this should use geometry instead of the mesh? Or support both?)
 ```
 physics.addBody( mesh, mass );
 ```
 
-Alternative way for more control is to create the body and then add it to the world. Body object is a normal Cannon.js body, so you can do whatever you want with it.
+For more control you can the body and then add it to the world. Body object is a normal Cannon.js body, so you can do whatever you want with it.
 ```
 var body = physics.newBody( mesh, mass, optional: Cannon shape ));
 physics.add(body);
