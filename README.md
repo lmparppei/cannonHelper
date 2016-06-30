@@ -7,6 +7,8 @@ A very very very simple helper class for fast and simple physics in Three.js. Cr
 
 You can access the world through CannonHelper.world and all bodies added by the helper are held in CannonHelper.bodies array. The original parent mesh can be found in physics.bodies[i].parent.
 
+This could be expanded a lot. Feel free to do it - I lack the skills and knowledge!
+
 
 ### Usage
 
