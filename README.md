@@ -10,17 +10,17 @@ You can access the world through CannonHelper.world and all bodies added by the 
 This could be expanded a lot. Feel free to do it - I lack the skills and knowledge!
 
 
-### Usage
+### Example 
 
-Start up and set -10 gravity on Y axis. Then create a Three.js Object 3D. If you want to set a different timeStep value for Cannon, you can set it with CannonHelper.timeStep. The default is 1.0 / 60.0.
+Start up and set -10 gravity on Y axis. If you want to set a different timeStep value for Cannon, you can set it with CannonHelper.timeStep. The default is 1.0 / 60.0.
 ```
 physics = new CannonHelper(0,-9,0);
 physics.timeStep = 1.0 / 60.0;
-var mesh = new THREE.Mesh( geometry, material );
 ```
 
 Easiest way to use the helper is through the .addBody cheat function. It will automatically create a body from Three.js mesh. (Come to think of it, maybe this should use geometry instead of the mesh? Or support both?)
 ```
+var mesh = new THREE.Mesh( geometry, material );
 physics.addBody( mesh, mass );
 ```
 
