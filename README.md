@@ -14,7 +14,7 @@ This could be expanded a lot. Feel free to do it - I lack the skills and knowled
 
 ### Example 
 
-A bare bones example. Set gravity to -9 on Y axis, create a mesh and add a physics body from it. Then just fire it up! Fire it up! If an object no longer exists its body will be automatically removed from world, so at basic level no additional checks or code is needed. 
+A bare bones example. Set gravity to -9 on Y axis, create a mesh and add a physics body from it. Then just fire it up! If an object no longer exists its body will be automatically removed from world, so at basic level no additional checks or code is needed. 
 ```
 physics = new CannonHelper(0,-9,0);
 var mesh = new THREE.Mesh( geometry, material );
@@ -26,7 +26,7 @@ animate () {
 }
 ```
 
-Easiest way to use the helper is through the .addBody cheat function. It will automatically create a body from Three.js mesh. (Come to think of it, maybe this should use geometry instead of the mesh? Or support both?)
+Easiest way to use the helper is through the .addBody function, which automatically creates a body from Three.js mesh. (Come to think of it, maybe this should use geometry instead of the mesh? Or support both?)
 
 For more control you can create a body and then add it to the world. Body object is a normal Cannon.js body, so you can do whatever you want with it.
 ```
@@ -34,7 +34,7 @@ var body = physics.newBody( mesh, mass, optional: Cannon shape ));
 physics.add(body);
 ```
 
-You can also create compound shapes by adding parts. You need to add the parts before adding the object to world.
+You can also create compound shapes by adding parts similar to Three.js children. Note that you need to add the parts before adding the object to world. 
 ```
 var body = physics.newBody ( mesh, mass );
 body.addPart( mesh );
@@ -45,3 +45,5 @@ If you want to set a different timeStep value for Cannon, you can set it with Ca
 ```
 physics.timeStep = 1.0 / 60.0;
 ```
+
+I'll provide a simple example project some time soon. 
