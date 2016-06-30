@@ -99,7 +99,14 @@ function CannonHelper (gravityX,gravityY,gravityZ, timeStep) {
                 shape = new CANNON.Sphere(parameters.radius);
                 break;
             case "CylinderGeometry":
+                
                 shape = new CANNON.Cylinder(parameters.radiusTop, parameters.radiusBottom, parameters.height, parameters.radialSegments);
+                
+                var quat = new CANNON.Quaternion();
+                quat.setFromAxisAngle(new CANNON.Vec3(1,0,0),-Math.PI/2);
+                var translation = new CANNON.Vec3(0,0,0);
+                shape.transformAllPoints(translation,quat);
+
                 break;
             case "PlaneGeometry":
 
