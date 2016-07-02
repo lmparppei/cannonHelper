@@ -47,3 +47,17 @@ physics.timeStep = 1.0 / 60.0;
 ```
 
 I'll provide a simple example project some time soon. 
+
+### Collision helper
+
+Not exactly a Three.js integration thing, but I included my collision group helper  here too. Assign names for groups and it automatically adds ALL collision groups to body's collision filter. You can then set the filter to exclude certain groups.
+
+```
+physics.setCollisionGroups([ 'floor', 'player', 'debris' ]);
+
+// This object belongs to collision group 'floor'
+body.setCollisions('player');
+
+// Excludes groups 'debris' and 'decoration' from collisions     
+body.noCollisions(['debris', 'decoration']);   
+```
