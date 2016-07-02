@@ -55,7 +55,7 @@ Not exactly a Three.js integration thing, but I included my collision group help
 ```
 physics.setCollisionGroups([ 'floor', 'player', 'debris' ]);
 
-// This object belongs to collision group 'floor'
+// This object belongs to collision group 'player'
 body.setCollisions('player');
 
 // Excludes groups 'debris' and 'decoration' from collisions     
