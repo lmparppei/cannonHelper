@@ -3,7 +3,7 @@
 
 Lauri-Matti Parppei 2016. Released under MIT License.
 
-A very very very simple helper class for fast and simple physics in Three.js. Created for my own needs but someone else might find this handy too. Creates Cannon shapes from Three.js meshes and also automatically removes them from world if they no longer exist. 
+A very very very simple helper class for fast and simple physics in Three.js. Created for my own needs but someone else might find this handy too. Creates Cannon shapes from Three.js meshes and also automatically removes them from world if they no longer exist. Supports box, sphere, plane and cylinder geometry.
 
 You can access the world through CannonHelper.world and all bodies added by the helper are held in CannonHelper.bodies array. The original parent mesh can be found in .bodies[i].parent.
 
